@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        #circle {
+            width: 100px;
+            height: 100px;
+            border: 2px solid green;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: slowMotion 2s linear forwards;
+        }
+        @keyframes slowMotion {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 style="margin-left: 570px;">Success</h2>
+    <h2 style="margin-left: 480px;">Payment SucessFully sent!....</h2>
+    <div id="circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="64" viewBox="0 1 9 20">
+            <path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+        </svg>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.getElementById('circle').style.opacity = 1;
+        }, 1000)
+    </script>
+</body>
+</html>
